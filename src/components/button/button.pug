@@ -1,0 +1,6 @@
+mixin button(text, type, state, mixes, jsattr, datalnk)
+    button.button(
+        class='' + ((mixes) ? `${mixes}__button` : '' ) + (` button--${state}`) + ((jsattr)? ` js-${jsattr}` : '')
+        type=`${type}`
+        data-lnk=''+((datalnk)? `${datalnk}` : '')
+    ) #{text}

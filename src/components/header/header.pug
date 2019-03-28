@@ -1,0 +1,19 @@
+mixin header
+    header.header.fullpage
+        .header__wrap
+            include ../menu/menu
+            +menu('header')
+            .header__content
+                h1.header__title GOODdler:
+                h2.header__subtitle
+                    |Engaging Local Businesses
+                    br
+                    |to Cover Local Needs
+                include ../button/button
+                +button('Get started', 'button', 'outline', 'header', 'btn-lnk', '/HowItWorks')
+            img.header__plane(
+                src=require('../../components/header/header__plane.png')
+                width='215'
+            )
+            .header__arrow-div
+                include header__arrow.svg
